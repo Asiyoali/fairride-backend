@@ -1,0 +1,40 @@
+{
+  "examples": {
+    "register_passenger": {
+      "method": "POST",
+      "url": "http://localhost:5000/api/auth/register",
+      "body": {
+        "name": "Asiya Passenger",
+        "email": "passenger@gmail.com",
+        "phone": "0610000000",
+        "password": "123456",
+        "role": "passenger"
+      }
+    },
+    "register_driver": {
+      "method": "POST",
+      "url": "http://localhost:5000/api/auth/register",
+      "body": {
+        "name": "Ali Driver",
+        "email": "driver@gmail.com",
+        "phone": "0611111111",
+        "password": "123456",
+        "role": "driver",
+        "licenseNumber": "LIC-12345",
+        "carNumber": "A12345",
+        "carModel": "Toyota Prius"
+      }
+    },
+    "request_ride": {
+      "method": "POST",
+      "url": "http://localhost:5000/api/rides/request",
+      "headers": {
+        "Authorization": "Bearer YOUR_PASSENGER_TOKEN"
+      },
+      "body": {
+        "pickupLocation": "Mogadishu Airport",
+        "destination": "KM4"
+      }
+    }
+  }
+}
